@@ -15,9 +15,9 @@ class MainMo {
             // pedir al usuario que ingrese numero
             System.out.println("Ingresa un numero");
             // leer numero
-            mod1.setA(sc.nextInt());
+            mod1.setA(sc.nextDouble());
             System.out.println("Ingresa un numero");
-            mod1.setB(sc.nextInt());
+            mod1.setB(sc.nextDouble());
             // verificar si el divisor es cero
             if (mod1.getB() != 0) {
                 // imprimir resultado

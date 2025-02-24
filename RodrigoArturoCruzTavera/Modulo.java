@@ -1,21 +1,21 @@
 // Clase para el módulo
 class Modulo {
     // declarar variables
-    int a, b;
+    double a, b;
     // metodo constructor 
     Modulo() {
     }
     // metodos getter&setter
-    public int getA() {
+    public double getA() {
         return a;
     }
-    public void setA(int a) {
+    public void setA(double a) {
         this.a = a;
     }
-    public int getB() {
+    public double getB() {
         return b;
     }
-    public void setB(int b) {
+    public void setB(double b) {
         this.b = b;
     }
 }

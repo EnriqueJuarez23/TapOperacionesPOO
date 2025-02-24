@@ -15,13 +15,13 @@ class MainDivision {
             // pedir al usuario que ingrese numero
             System.out.println("Ingresa un numero");
             // leer numero
-            d1.setA(sc.nextInt());
+            d1.setA(sc.nextDouble());
             System.out.println("Ingresa un numero");
-            d1.setB(sc.nextInt());
+            d1.setB(sc.nextDouble());
             // verificar si el divisor es cero
             if (d1.getB() != 0) {
                 // imprimir resultado
-                System.out.println("La respuesta es: " + ((double) d1.getA() / d1.getB()));
+                System.out.println("La respuesta es: " + (d1.getA() / d1.getB()));
             } else {
                 System.out.println("Error: No se puede dividir por cero");
             }
