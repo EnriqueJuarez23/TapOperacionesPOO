@@ -1,26 +1,22 @@
-// Nombre de la clase
-class Multiplicacion {
-    // declaracion de variables
-    int a, b;
+class Multiplicacion {  // Declaración de la clase 'Multiplicacion'.
+    int num1, num2;  // Declaración de dos variables enteras, 'num1' y 'num2', para almacenar los números que se multiplicarán.
 
-    // metodo constructor de la clase
-    Multiplicacion() {
-    }
-    // get de la variable a
-    public int getA() {
-        return a;
-    }
-    // set de la variable a
-    public void setA(int a) {
-        this.a = a;
-    }
-    // get de la variable b
-    public int getB() {
-        return b;
-    }
-    // set de la variable b
-    public void setB(int b) {
-        this.b = b;
+    Multiplicacion() {  // Constructor de la clase, vacío en este caso, no realiza ninguna acción al crear el objeto.
+    }  // Cuerpo del constructor vacío.
+
+    public int getNum1() {  // Método público que devuelve el valor de la variable 'num1'.
+        return num1;  // Retorna el valor de 'num1'.
     }
 
+    public void setNum1(int num1) {  // Método público para establecer el valor de 'num1'.
+        this.num1 = num1;  // Asigna el valor pasado como parámetro a la variable 'num1'.
+    }
+
+    public int getNum2() {  // Método público que devuelve el valor de la variable 'num2'.
+        return num2;  // Retorna el valor de 'num2'.
+    }
+
+    public void setNum2(int num2) {  // Método público para establecer el valor de 'num2'.
+        this.num2 = num2;  // Asigna el valor pasado como parámetro a la variable 'num2'.
+    }
 }

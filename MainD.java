@@ -1,40 +1,61 @@
-// se importa la libreria Scanner para introducir datos desde el teclado
-import java.util.Scanner;
-// Nombre de la clase
-class MainD {
-    // Metodo main
-    public static void main(String[] args) {
-        // Objeto Scanner para almacenar los datos del usuario
-        Scanner op = new Scanner(System.in);
-        // Objeto para asignar y obtener los valores de la division
-        Division d1 = new Division();
-        // declaracion de variable para introducir datos en el switch
-        int d;
-        // inicio del do while
+import java.util.Scanner; // Importamos la clase Scanner para leer la entrada del usuario desde la consola.
+
+class MainD { // Declaración de la clase principal 'MainD'.
+    public static void main(String[] args) { // Método principal que se ejecuta al iniciar el programa.
+        // Creamos un objeto de la clase Scanner para permitir que el usuario ingrese datos desde la consola.
+        Scanner sc = new Scanner(System.in);
+
+        // Variable para almacenar la opción elegida por el usuario en el menú.
+        int op;
+
+        // Bucle do-while que permite repetir el menú hasta que el usuario decida salir (opción 2).
         do {
-            // opciones del menu
-            System.out.println("1. Realizar Division");
-            System.out.println("0. Salir");
-            // lectura del valor asignado a la variable, donde el usuario ingresa su opcion
-            d = op.nextInt();
-            switch (d) {
-                // Caso 1 que realiza la opcion division
+            // Mostramos el menú de opciones al usuario.
+            System.out.println("Menu");
+            System.out.println("-------------------");
+            System.out.println("Elige una opcion:");
+            System.out.println("1. Realizar division");
+            System.out.println("2. Salir");
+            System.out.print("Opcion: ");
+            
+            // Leemos la opción que el usuario ingresa y la almacenamos en la variable 'op'.
+            op = sc.nextInt();
+            
+            // Usamos una estructura switch para manejar las diferentes opciones del menú.
+            switch (op) {
                 case 1:
-                    System.out.println("Ingresa un numero");
-                    d1.setA(op.nextDouble());
-                    System.out.println("Ingresa un numero");
-                    d1.setB(op.nextDouble());
-                    System.out.println(d1.getA() / d1.getB());
-                    break;
-                    // Caso 0 opcion que cierra el menu 
-                case 0:
-                    System.out.println("¡Hasta Luego!");
-                    break;
-                    // indicacion para ociones erroneas
+                    // Si el usuario elige la opción 1, creamos un objeto de la clase 'Division' para realizar la división.
+                    Division di = new Division();
+                    
+                    // Pedimos al usuario que ingrese el primer número para realizar la división.
+                    System.out.print("Ingresa el primer numero: ");
+                    // Almacenamos el valor ingresado en la variable 'num1' del objeto 'di'.
+                    di.setNum1(sc.nextDouble());
+                    
+                    // Pedimos al usuario que ingrese el segundo número para realizar la división.
+                    System.out.print("Ingresa el segundo numero: ");
+                    // Almacenamos el valor ingresado en la variable 'num2' del objeto 'di'.
+                    di.setNum2(sc.nextDouble());
+                    
+                    // Calculamos y mostramos el resultado de la división.
+                    System.out.println("El resultado de la division es: " + (di.getNum1() / di.getNum2()));
+                    System.out.println("---------------------------------");
+                    break; // Salimos del case 1 y volvemos a mostrar el menú.
+
+                case 2:
+                    // Si el usuario elige la opción 2, imprimimos un mensaje de despedida.
+                    System.out.println("Hasta luego :)");
+                    break; // Salimos del case 2 y finaliza el programa.
+
                 default:
-                    System.out.println("Opcion incorrecta");
+                    // Si el usuario ingresa una opción no válida, mostramos un mensaje de error.
+                    System.out.println("Ingresa una opcion valida.");
             }
-            // Cierre del do while 
-        } while (d != 0);
+
+            // El bucle se repite hasta que el usuario elige salir (opción 2).
+        } while (op != 2);
+        
+        // Cerramos el objeto Scanner para liberar los recursos del sistema.
+        sc.close();
     }
 }
